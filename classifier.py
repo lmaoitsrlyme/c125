@@ -6,7 +6,7 @@ from sklearn.linear_model import LogisticRegression
 from PIL import Image
 import PIL.ImageOps 
 
-X= np.load("image.npz")['arr_0']
+X = np.load("image.npz")['arr_0']
 y = pd.read_csv("labels.csv")["labels"]
 
 print(pd.Series(y).value_counts())
