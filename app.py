@@ -3,12 +3,12 @@ from classifier import get_prediction
 
 app = Flask(__name__)
 
-@app.route("/Predict-alphabet",methods =["POST"] )
+@app.route("/alphabet",methods =["POST"] )
 def predict_data():
     image = request.files.get("alphabet")
     prediction = get_prediction(image)
     return jsonify({
-        "prediction":prediction
+        "prediction" : prediction
 
     }),200
 
